@@ -7,7 +7,11 @@ pub fn simulate(){
     let choice=0;
     match choice {
         1=>{
-            println!("Inserting ! ..")
+            println!("\nEnter Your name:= ");
+            let record =read_console_line();
+            the_names = insert_record(record, the_names.clone());
+            println!("\n\t\tRecord Has Been Added Successfully !....\n");
+
         },
         2=> {
             println!("Removing ! ..")
