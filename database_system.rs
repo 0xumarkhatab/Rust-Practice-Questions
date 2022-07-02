@@ -1,10 +1,16 @@
+use crate::Reader::{read_console_line, read_int};
 
 
 pub fn simulate(){
     println!("\t\t-- Welcome to Rust Interaction Database -- \n");
     println!("Select the Operation to Perform ! \n");
     println!("1-> Add Record \n2-> Remove Record \n3-> Print Records\n4->Exit");
-    let choice=0;
+    // We are using String here instead of &str because string literals 
+    // '&str' are immutable
+    
+    let mut the_names:Vec<String>=Vec::new();
+    let mut choice=0;
+    choice= read_int();
     match choice {
         1=>{
             println!("\nEnter Your name:= ");
