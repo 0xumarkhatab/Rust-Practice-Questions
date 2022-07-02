@@ -12,8 +12,8 @@ let params = Rectangle{width:30,
     height:50
     };
 
-println!("\nThe Area of Rectange using Tuple is := {} \n",area(&react_prams))
-println!("\nThe Area of Rectange using Struct is := {} \n",area_through_struct(&params))
+println!("\nThe Area of Rectange using Tuple is := {} \n",area(&react_prams));
+println!("\nThe Area of Rectange using Struct is := {} \n",area_through_struct(&params));
 
 
 }
