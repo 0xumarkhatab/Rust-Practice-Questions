@@ -23,7 +23,10 @@ pub fn simulate(){
                 println!("\n\t\tRecord Has Been Added Successfully !....\n");
             },
             2=> {
-                println!("\nRemoving Record  ");
+                println!("\nEnter Record name:= ");
+                let mut record =read_console_line();
+                the_names = removeFromVector(record, the_names.clone());
+
     
             },
             3=>{
@@ -54,7 +57,22 @@ fn insert_record(record:String,the_names:Vec<String> )->Vec<String>{
         return state;
         
 }
+fn removeFromVector(elem:String ,vector:Vec<String>)->Vec<String>{
+    let mut v=vector.clone();
+    if v.contains(&elem)==true {
+        let index = v.iter().position(|x| *x == elem).unwrap();
+        v.remove(index);
+        println!("Removed Successfully !");
+        return v;
 
+            
+    }
+    else{
+        println!("Not Removed !");
+        return vector;
+    }
+    
+}
 fn printDatabase(db:Vec<String>){
     println!("\n\n\t\t---- Printing Database State ---- \n");
     let mut index=1;

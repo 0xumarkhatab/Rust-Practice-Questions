@@ -3,6 +3,7 @@ use std::io::{stdin, self};
 pub fn read_console_line()->String {
     let mut buffer = String::new();
     stdin().read_line(&mut buffer);
+    buffer= String::from(buffer.trim());
     return buffer
 }
 
