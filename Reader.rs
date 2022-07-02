@@ -1,4 +1,3 @@
-
 use std::io::stdin;
 
 pub fn read_console()->String {
