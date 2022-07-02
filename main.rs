@@ -2,7 +2,7 @@ mod fib;
 mod greetings;
 mod Reader;
 mod database_system;
-
+mod react_Area_structs_practice;
 
 
 fn main() {
@@ -13,7 +13,10 @@ fn main() {
 
  //  print!("\n\t\tConsole Greeting Program \t\t\n");
  //   greetings::greet();
-    println!("\nTiny database");
-    database_system::simulate();
+    // println!("\nTiny database");
+    // database_system::simulate();
+    println!("\nReactangle Area : \n");
+    react_Area_structs_practice::main();
+    
   
 }
