@@ -23,7 +23,7 @@ pub fn simulate(){
                 println!("\n\t\tRecord Has Been Added Successfully !....\n");
             },
             2=> {
-                println!("\nEnter Record name:= ");
+                println!("\nEnter Record name to remove := ");
                 let mut record =read_console_line();
                 the_names = removeFromVector(record, the_names.clone());
 
