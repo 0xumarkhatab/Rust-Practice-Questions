@@ -25,3 +25,13 @@ pub fn simulate(){
 
 
 }
+fn insert_record(record:String,the_names:Vec<String> )->Vec<String>{
+
+    let mut name=String::from(record); //using the String Constructor
+    // Cloning because of the ownership behaviour of Rust
+    let mut state = the_names.clone();
+    state.push(name.clone()); 
+    
+    return state;
+    
+}
