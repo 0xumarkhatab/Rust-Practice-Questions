@@ -23,7 +23,8 @@ pub fn simulate(){
             println!("Removing ! ..")
         },
         3=>{
-            println!("Printing ! ..")
+            printDatabase(the_names.clone());
+
         },
         4=>{
             println!("Exitting !")
@@ -44,4 +45,13 @@ fn insert_record(record:String,the_names:Vec<String> )->Vec<String>{
     
     return state;
     
+}
+fn printDatabase(db:Vec<String>){
+    println!("\n\n\t\t---- Printing Database State ---- \n");
+    let mut index=1;
+    for element in db.iter(){
+        println!("{} -> {}\n",index,element);
+        index=index+1;
+    }
+
 }
