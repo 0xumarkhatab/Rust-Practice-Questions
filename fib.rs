@@ -13,7 +13,7 @@ pub fn calculate_nth_fib_number(n:u8)->i128{
         return b
     }
     
-    for i in (2..n){
+    for i in 2..n{
         c=a+b;
         a=b;
         b=c;

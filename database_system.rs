@@ -1,4 +1,4 @@
-use crate::Reader::{read_console_line, read_int};
+use crate::reader::{read_console_line, read_int};
 
 
 pub fn simulate(){
@@ -24,13 +24,13 @@ pub fn simulate(){
             },
             2=> {
                 println!("\nEnter Record name to remove := ");
-                let mut record =read_console_line();
-                the_names = removeFromVector(record, the_names.clone());
+                let record =read_console_line();
+                the_names = remove_from_database(record, the_names.clone());
 
     
             },
             3=>{
-                printDatabase(the_names.clone());
+                print_database(the_names.clone());
             },
             EXIT_CHOICE=>{
                 println!("\n\t\tExitting !... ");
@@ -49,7 +49,7 @@ pub fn simulate(){
 
 fn insert_record(record:String,the_names:Vec<String> )->Vec<String>{
 
-        let mut name=String::from(record); //using the String Constructor
+        let  name=String::from(record); //using the String Constructor
         // Cloning because of the ownership behaviour of Rust
         let mut state = the_names.clone();
         state.push(name.clone()); 
@@ -57,7 +57,7 @@ fn insert_record(record:String,the_names:Vec<String> )->Vec<String>{
         return state;
         
 }
-fn removeFromVector(elem:String ,vector:Vec<String>)->Vec<String>{
+fn remove_from_database(elem:String ,vector:Vec<String>)->Vec<String>{
     let mut v=vector.clone();
     if v.contains(&elem)==true {
         let index = v.iter().position(|x| *x == elem).unwrap();
@@ -73,7 +73,7 @@ fn removeFromVector(elem:String ,vector:Vec<String>)->Vec<String>{
     }
     
 }
-fn printDatabase(db:Vec<String>){
+fn print_database(db:Vec<String>){
     println!("\n\n\t\t---- Printing Database State ---- \n");
     let mut index=1;
     for element in db.iter(){

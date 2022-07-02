@@ -1,8 +1,11 @@
+#![allow(dead_code)]
+#![allow(unused_variables)]
+
 mod fib;
 mod greetings;
-mod Reader;
+mod reader;
 mod database_system;
-mod react_Area_structs_practice;
+mod react_area_structs_practice;
 
 
 fn main() {
@@ -16,7 +19,7 @@ fn main() {
     // println!("\nTiny database");
     // database_system::simulate();
     println!("\nReactangle Area : \n");
-    react_Area_structs_practice::main();
-    
+    react_area_structs_practice::main();
+
   
 }
