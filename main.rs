@@ -7,7 +7,7 @@ mod reader;
 mod database_system;
 mod react_area_structs_practice;
 mod options;
-
+mod enums;
 fn main() {
     println!("Hello, Rustaceans !");
     print!("\n\t\tFibonacii Numbers Generator \t\t\n");
@@ -20,9 +20,9 @@ fn main() {
     // // database_system::simulate();
     // println!("\nReactangle Area : \n");
     // react_area_structs_practice::main();
-    println!("\nWorking With Options");
-    options::main();
-
+    // println!("\nWorking With Options");
+    // options::main();
+    enums::main();
 
 }
 
