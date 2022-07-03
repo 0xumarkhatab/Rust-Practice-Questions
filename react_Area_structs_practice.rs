@@ -31,3 +31,5 @@ fn area(rect_prams:&(u32,u32) )->u32{
 
 }
 
+
+

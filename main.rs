@@ -6,7 +6,7 @@ mod greetings;
 mod reader;
 mod database_system;
 mod react_area_structs_practice;
-
+mod options;
 
 fn main() {
     println!("Hello, Rustaceans !");
@@ -17,9 +17,12 @@ fn main() {
  //  print!("\n\t\tConsole Greeting Program \t\t\n");
  //   greetings::greet();
     // println!("\nTiny database");
-    // database_system::simulate();
-    println!("\nReactangle Area : \n");
-    react_area_structs_practice::main();
+    // // database_system::simulate();
+    // println!("\nReactangle Area : \n");
+    // react_area_structs_practice::main();
+    println!("\nWorking With Options");
+    options::main();
 
-  
+
 }
+
